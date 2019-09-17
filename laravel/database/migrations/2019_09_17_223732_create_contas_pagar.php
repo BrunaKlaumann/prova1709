@@ -17,7 +17,6 @@ class CreateContasPagar extends Migration
             $table->bigIncrements('id');
             $table->string('nome', 50);
             $table->decimal('valor', 7, 2);
-            $table->date('data');
             $table->timestamps();
         });
     }
