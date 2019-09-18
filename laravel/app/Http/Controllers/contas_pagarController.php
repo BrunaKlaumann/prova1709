@@ -17,16 +17,18 @@ class contas_pagarController extends Controller
         return response()->json($contas_pagar->toArray(), 200);
       }
 
-      public function show(Contas__pagar $contas__pagar) {
+      public function show(Contas_pagar $contas_pagar) {
         return response()->json($contas_pagar);
       }
 
-      public function update(Request $request, Contas_pagar $contas_pagar) {
-        $contas__pagar->update($request->all());
+      public function update(Request $request, $id) {
+        $contas_pagar=Contas_pagar::findOrFail($id);
+        $contas_pagar->update($request->all());
         return response()->json($contas_pagar, 200);
       }
 
-      public function delete(Contas_pagar $contas_pagar) {
+      public function delete(Contas_pagar $contas_pagar, $id) {
+        $contas_pagar=Contas_pagar::findOrFail($id);
         $contas_pagar->delete();
       }
     

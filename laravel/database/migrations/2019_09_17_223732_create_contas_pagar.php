@@ -13,7 +13,7 @@ class CreateContasPagar extends Migration
      */
     public function up()
     {
-        Schema::create('contas_pagar', function (Blueprint $table) {
+        Schema::create('contas_pagars', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('nome', 50);
             $table->decimal('valor', 7, 2);
@@ -28,6 +28,6 @@ class CreateContasPagar extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('contas_pagar');
+        Schema::dropIfExists('contas_pagars');
     }
 }

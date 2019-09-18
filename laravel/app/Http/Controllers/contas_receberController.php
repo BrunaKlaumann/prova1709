@@ -22,12 +22,14 @@ class Contas_receberController extends Controller
         return response()->json($contas_receber);
       }
 
-      public function update(Request $request, Contas_receber $contas_receber) {
+      public function update(Request $request, $id) {
+        $contas_receber=Contas_receber::findOrFail($id);
         $contas_receber->update($request->all());
         return response()->json($contas_receber, 200);
       }
 
-      public function delete(Contas_receber $contas_receber) {
+      public function delete(Contas_receber $contas_receber, $id) {
+        $contas_receber=Contas_receber::findOrFail($id);
         $contas_receber->delete();
       }
 }

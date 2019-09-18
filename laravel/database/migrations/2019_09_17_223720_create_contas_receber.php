@@ -13,7 +13,7 @@ class CreateContasReceber extends Migration
      */
     public function up()
     {
-        Schema::create('contas_receber', function (Blueprint $table) {
+        Schema::create('contas_recebers', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('nome', 50);
             $table->decimal('valor', 7, 2);
@@ -28,6 +28,6 @@ class CreateContasReceber extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('contas_receber');
+        Schema::dropIfExists('contas_recebers');
     }
 }

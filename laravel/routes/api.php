@@ -14,14 +14,14 @@ use Illuminate\Http\Request;
 */
 
 Route::get('/contas_pagar', 'Contas_pagarController@index');
-Route::get('/contas_pagar/{contas_pagar}', 'Contas_pagarController@show');
+Route::get('/contas_pagar/{id}', 'Contas_pagarController@show');
 Route::post('/contas_pagar', 'Contas_pagarController@store');
-Route::patch('/contas_pagar/{contas_pagar}', 'Contas_pagarController@update');
-Route::delete('/contas_pagar/{contas_pagar}', 'Contas_pagarController@delete');
+Route::put('/contas_pagar/{id}', 'Contas_pagarController@update');
+Route::delete('/contas_pagar/{id}', 'Contas_pagarController@delete');
 
 
 Route::get('/contas_receber', 'Contas_receberController@index');
-Route::get('/contas_receber/{contas_receber}', 'Contas_receberController@show');
+Route::get('/contas_receber/{id}', 'Contas_receberController@show');
 Route::post('/contas_receber', 'Contas_receberController@store');
-Route::patch('/contas_receber/{contas_receber}', 'Contas_receberController@update');
-Route::delete('/contas_receber/{contas_receber}', 'Contas_receberController@delete');
+Route::put('/contas_receber/{id}', 'Contas_receberController@update');
+Route::delete('/contas_receber/{id}', 'Contas_receberController@delete');
